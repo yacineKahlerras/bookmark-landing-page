@@ -90,12 +90,122 @@ select {
   font-size: 62.5%;
   --Soft-Blue: hsl(231, 69%, 60%);
   --Soft-Red: hsl(0, 94%, 66%);
+  --Soft-Gray: #f7f7f7;
   --Grayish-Blue: hsl(229, 8%, 60%);
   --Very-Dark-Blue: hsl(229, 31%, 21%);
   --font-weight-1: 400;
   --font-weight-2: 500;
   font-family: "Rubik", sans-serif;
+  --transition-1: 0.2s;
+  --elements-width-1: min(90%, 111rem);
 }
 body {
   font-size: 1.8rem;
+  color: var(--Very-Dark-Blue);
+  text-align: center;
+}
+/* 
+
+
+buttons 
+
+
+*/
+button {
+  background: var(--Soft-Blue);
+  border: none;
+  color: white;
+  border-radius: 0.4em;
+  padding: 0.88em 2em;
+  transition: var(--transition-1);
+  cursor: pointer;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.089);
+}
+button:hover {
+  background: white;
+  box-shadow: 0px 0px 0px 0.2rem var(--Soft-Blue) inset;
+  color: var(--Soft-Blue);
+}
+.red-btn {
+  background: var(--Soft-Red);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.red-btn:hover {
+  background: white;
+  box-shadow: 0px 0px 0px 0.2rem var(--Soft-Red) inset;
+  color: var(--Soft-Red);
+}
+.gray-btn {
+  background: var(--Soft-Gray);
+  color: var(--Grayish-Blue);
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.082);
+}
+.gray-btn:hover {
+  box-shadow: 0px 0px 0px 0.2rem var(--Grayish-Blue) inset;
+  color: var(--Grayish-Blue);
+}
+/* 
+
+
+lists 
+
+
+*/
+li {
+  cursor: pointer;
+}
+/* 
+
+
+titles 
+
+
+*/
+h1 {
+  font-size: clamp(2.3rem, 0.5rem + 7.2vw, 4.5rem);
+}
+h2 {
+  font-size: clamp(1.9rem, 0.5rem + 7.2vw, 2.9rem);
+}
+h3 {
+  font-size: clamp(1.4rem, 0.5rem + 7.2vw, 1.8rem);
+}
+p {
+  font-size: clamp(1.1rem, 0.5rem + 7.2vw, 1.6rem);
+  color: var(--Grayish-Blue);
+}
+/* 
+=====================
+=====================
+        navigation 
+====================
+====================
+*/
+nav {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 6.8rem;
+}
+.nav-center {
+  width: var(--elements-width-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3.2rem;
+}
+.nav-links-container {
+  display: none;
+}
+.hamburger {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.hamburger svg path {
+  fill: var(--Very-Dark-Blue);
+}
+.hamburger:hover {
+  box-shadow: none;
 }
