@@ -98,6 +98,8 @@ select {
   font-family: "Rubik", sans-serif;
   --transition-1: 0.2s;
   --elements-width-1: min(90%, 111rem);
+  --elements-width-2: min(100%, 64.8rem);
+  --elements-width-3: min(100%, 53.9rem);
 }
 body {
   font-size: 1.8rem;
@@ -208,4 +210,172 @@ nav {
 }
 .hamburger:hover {
   box-shadow: none;
+}
+/* 
+=====================
+=====================
+        hero 
+====================
+====================
+*/
+main {
+  width: var(--elements-width-1);
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.main-center {
+  width: 100%;
+}
+
+/* image */
+.hero-image {
+  width: var(--elements-width-2);
+  position: relative;
+  isolation: isolate;
+}
+.hero-image img {
+  width: 100%;
+}
+.hero-image::before {
+  content: "";
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  bottom: 0;
+  left: 13rem;
+  background: var(--Soft-Blue);
+  z-index: -1;
+  border-radius: 15rem;
+}
+
+/* text */
+.hero-content {
+  margin-bottom: 12.3rem;
+}
+.hero-content h1 {
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  margin-bottom: 4rem;
+}
+
+/* 
+=====================
+=====================
+        features 
+====================
+====================
+*/
+.features {
+  margin-bottom: 12.1rem;
+}
+.section-text {
+  width: var(--elements-width-3);
+  margin-bottom: 3rem;
+}
+.section-text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.features-btns {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 5.8rem;
+}
+.features-btns li {
+  padding: 1.5rem 0;
+  border: 0.1rem solid var(--Grayish-Blue);
+  border-right: none;
+  border-left: none;
+  position: relative;
+  color: var(--Grayish-Blue);
+}
+.features-btns li:not(.features-btns li:first-of-type) {
+  border-top: none;
+}
+.features-btns li::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-bottom: 0.25em solid var(--Soft-Red);
+  transition: var(--transition-1);
+}
+.features-btns .feature-selected::after {
+  width: 35%;
+}
+.feature-selected {
+  color: var(--Very-Dark-Blue) !important;
+}
+
+/* content */
+.features-content-container {
+  width: 100%;
+}
+.features-content {
+  width: 100%;
+}
+.features-img {
+  width: var(--elements-width-2);
+  position: relative;
+  margin-bottom: 6.7rem;
+}
+.features-img img {
+  width: 100%;
+}
+.features-img::before {
+  content: "";
+  width: 150%;
+  height: 80%;
+  position: absolute;
+  bottom: -4rem;
+  right: 3rem;
+  background: var(--Soft-Blue);
+  z-index: -1;
+  border-radius: 15rem;
+}
+
+/* features text */
+.features-content-text {
+  width: var(--elements-width-3);
+}
+.features-content-text h2 {
+  margin-bottom: 1.5rem;
+}
+.features-content-text p {
+  margin-bottom: 3.5rem;
+}
+.features-content-text button {
+  display: none;
+}
+
+/* 
+=====================
+=====================
+      extensions 
+====================
+====================
+*/
+.download-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.browsers-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7.3rem;
+}
+.browsers-container li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
