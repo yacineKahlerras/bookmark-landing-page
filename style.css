@@ -105,6 +105,8 @@ body {
   font-size: 1.8rem;
   color: var(--Very-Dark-Blue);
   text-align: center;
+
+  overflow-x: hidden;
 }
 /* 
 
@@ -420,6 +422,7 @@ main {
 .questions-section .section-text {
   margin-bottom: 4.2rem;
 }
+
 .questions-container {
   padding-inline-start: 0;
   margin: 0;
@@ -429,6 +432,8 @@ main {
   padding: 2rem 0;
   border-bottom: 0.1rem solid var(--Grayish-Blue);
 }
+
+/* question */
 .question {
   display: flex;
   align-items: center;
@@ -441,5 +446,100 @@ main {
 .question-arrow {
   transition: var(--transition-1);
 }
-.question-arrow-active {
+.question h3 {
+  font-weight: var(--font-weight-2);
+  transition: var(--transition-1);
+}
+.questions-container li:hover h3 {
+  color: var(--Soft-Red);
+}
+.question svg {
+  transform: rotate(180deg);
+}
+.question svg path {
+  stroke: var(--Soft-Red);
+}
+
+/* hide question */
+.hide-question h3 {
+  margin-bottom: 0;
+}
+.hide-question svg {
+  transform: rotate(0deg);
+}
+.hide-question svg path {
+  stroke: var(--Soft-Blue);
+}
+.hide-question p {
+  display: none;
+}
+.hide-question .question {
+  margin-bottom: 0;
+}
+
+/* 
+=====================
+=====================
+      footer 
+====================
+====================
+*/
+footer {
+  color: white;
+}
+footer p {
+  color: white;
+}
+footer h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: white;
+  font-weight: var(--font-weight-2);
+}
+.upper-footer-container {
+  width: 100%;
+  min-height: 36rem;
+  background: var(--Soft-Blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 
+
+
+upper footer 
+
+
+*/
+.upper-footer {
+  width: min(90%, 44.3rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 6.7rem 0;
+}
+.upper-footer h2 {
+  margin-bottom: 2.6rem;
+}
+.upper-footer p {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+}
+.upper-footer form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.upper-footer input {
+  min-height: 4.8rem;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  margin-bottom: 1.5rem;
+  padding: 0rem 1.8rem;
+  font-size: 1.5rem;
 }
