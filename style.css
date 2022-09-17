@@ -95,10 +95,12 @@ select {
   --Soft-Gray: #f7f7f7;
   --Grayish-Blue: hsl(229, 8%, 60%);
   --Very-Dark-Blue: hsl(229, 31%, 21%);
+  --Soft-Very-Dark-Blue: hsla(229, 31%, 21%, 0.911);
   --font-weight-1: 400;
   --font-weight-2: 500;
   font-family: "Rubik", sans-serif;
   --transition-1: 0.2s;
+  --transition-2: 0.5s;
   --elements-width-1: min(90%, 111rem);
   --elements-width-2: min(100%, 64.8rem);
   --elements-width-3: min(100%, 53.9rem);
@@ -200,6 +202,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding-top: 3.2rem;
+  z-index: 99;
 }
 .nav-links-container {
   display: none;
@@ -214,6 +217,20 @@ nav {
 }
 .hamburger:hover {
   box-shadow: none;
+  background: transparent;
+}
+/* 
+
+
+sidemenu options 
+
+
+*/
+.sidemenu-nav .hamburger svg path {
+  fill: white;
+}
+.sidemenu-nav .nav-center > svg g path {
+  fill: white;
 }
 /* 
 =====================
@@ -537,6 +554,7 @@ upper footer
 .input-container {
   width: 100%;
   position: relative;
+  transition: var(--transition-2);
 }
 .upper-footer input {
   width: 100%;
@@ -565,7 +583,7 @@ input error
 }
 .input-error::after {
   content: "Whoops, make sure it's an email";
-  width: 100%;
+  width: calc(100% + 0.4rem);
   height: 3rem;
   position: absolute;
   bottom: -1rem;
@@ -577,6 +595,11 @@ input error
   font-size: 1.2rem;
   padding: 1rem;
   border-radius: 0.5rem;
+  transform: translateX(-0.2rem);
+}
+.input-error input {
+  background: white url("./images/icon-error.svg") no-repeat;
+  background-position: right 1rem top 50%;
 }
 /* 
 
@@ -617,4 +640,57 @@ lower footer
 }
 .lower-footer > svg {
   margin-bottom: 3rem;
+}
+
+/* 
+==================
+==================
+      sidemenu 
+==================
+==================
+*/
+.sidemenu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--Soft-Very-Dark-Blue);
+  color: white;
+}
+.sidemenu-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sidemenu-links {
+  width: min(100%, 31rem);
+  position: relative;
+  top: 10.5rem;
+}
+.sidemenu-links li {
+  border-top: 0.1rem solid var(--Grayish-Blue);
+  padding: 2rem 0;
+  font-weight: var(--font-weight-1);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+.sidemenu-center > div {
+  position: absolute;
+  bottom: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.sidemenu-links button {
+  width: 100%;
+  background: transparent;
+  border: 0.2rem solid white;
+  letter-spacing: 0.4rem;
+  font-weight: var(--font-weight-1);
+}
+.sidemenu-links button:hover {
+  box-shadow: none;
+  color: var(--Grayish-Blue);
+  border: 0.2rem solid var(--Grayish-Blue);
 }
