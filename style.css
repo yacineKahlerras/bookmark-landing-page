@@ -30,6 +30,8 @@ dd {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Set core root defaults */
@@ -282,8 +284,7 @@ main {
 
 .features-btns {
   width: 100%;
-  padding: 0;
-  margin-bottom: 5.8rem;
+  margin-bottom: 5.8rem !important;
 }
 .features-btns li {
   padding: 1.5rem 0;
@@ -425,8 +426,7 @@ main {
 
 .questions-container {
   padding-inline-start: 0;
-  margin: 0;
-  margin-bottom: 5.5rem;
+  margin-bottom: 5.5rem !important;
 }
 .questions-container li {
   padding: 2rem 0;
@@ -534,7 +534,12 @@ upper footer
   display: flex;
   flex-direction: column;
 }
+.input-container {
+  width: 100%;
+  position: relative;
+}
 .upper-footer input {
+  width: 100%;
   min-height: 4.8rem;
   border-radius: 0.5em;
   outline: none;
@@ -542,4 +547,74 @@ upper footer
   margin-bottom: 1.5rem;
   padding: 0rem 1.8rem;
   font-size: 1.5rem;
+  position: relative;
+}
+
+/* 
+
+
+input error 
+
+
+*/
+.input-error {
+  margin-bottom: 3rem;
+  isolation: isolate;
+  border: 0.2rem solid var(--Soft-Red);
+  border-radius: 0.5em;
+}
+.input-error::after {
+  content: "Whoops, make sure it's an email";
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  color: white;
+  background: var(--Soft-Red);
+  z-index: -1;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+/* 
+
+
+lower footer 
+
+
+*/
+.lower-footer-container {
+  width: 100%;
+  min-height: 8.8rem;
+  background: var(--Very-Dark-Blue);
+  padding: 5.1rem 0 0 0rem;
+  display: grid;
+  place-items: center;
+}
+.lower-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline-start: 0;
+  gap: 2rem;
+  margin-bottom: 5rem !important;
+}
+.footer-links-container:last-of-type {
+  flex-direction: row;
+}
+.footer-links-container li:hover svg path,
+.footer-links-container li:hover {
+  fill: var(--Soft-Red);
+  color: var(--Soft-Red);
+}
+.lower-footer > svg {
+  margin-bottom: 3rem;
 }
