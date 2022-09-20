@@ -364,6 +364,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: var(--transition-2);
 }
 .features-img {
   width: var(--elements-width-2);
