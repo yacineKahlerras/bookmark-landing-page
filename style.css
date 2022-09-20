@@ -356,9 +356,14 @@ main {
 /* content */
 .features-content-container {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
 }
 .features-content {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .features-img {
   width: var(--elements-width-2);
@@ -678,7 +683,8 @@ lower footer
   left: 0;
   background: var(--Soft-Very-Dark-Blue);
   color: white;
-  display: none;
+  transform: translateX(100%);
+  transition: var(--transition-2);
 }
 .sidemenu-center {
   width: 100%;
@@ -715,4 +721,7 @@ lower footer
   box-shadow: none;
   color: var(--Grayish-Blue);
   border: 0.2rem solid var(--Grayish-Blue);
+}
+.show-sidemenu {
+  transform: translateX(0);
 }
