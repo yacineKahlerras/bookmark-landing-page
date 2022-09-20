@@ -207,6 +207,15 @@ nav {
 .nav-links-container {
   display: none;
 }
+/* 
+
+
+
+hamburger menu 
+
+
+
+*/
 .hamburger {
   background: transparent;
   box-shadow: none;
@@ -218,6 +227,12 @@ nav {
 .hamburger:hover {
   box-shadow: none;
   background: transparent;
+}
+.hamburger > svg path:nth-of-type(2) {
+  display: none;
+}
+.hamburger > svg path:nth-of-type(1) {
+  display: block;
 }
 /* 
 
@@ -231,6 +246,12 @@ sidemenu options
 }
 .sidemenu-nav .nav-center > svg g path {
   fill: white;
+}
+.sidemenu-nav .hamburger > svg path:nth-of-type(1) {
+  display: none;
+}
+.sidemenu-nav .hamburger > svg path:nth-of-type(2) {
+  display: block;
 }
 /* 
 =====================
@@ -657,6 +678,7 @@ lower footer
   left: 0;
   background: var(--Soft-Very-Dark-Blue);
   color: white;
+  display: none;
 }
 .sidemenu-center {
   width: 100%;
