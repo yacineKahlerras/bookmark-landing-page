@@ -43,6 +43,21 @@ const showFeature = (index) => {
   });
 };
 
+showFeature(0);
+
 featureBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => showFeature(index));
+});
+
+/**
+ * =========================
+ * =========================
+ *          questions
+ * =========================
+ * =========================
+ */
+const questions = [...document.querySelector(".questions-container").children];
+
+questions.forEach((q) => {
+  q.addEventListener("click", () => q.classList.toggle("hide-question"));
 });
