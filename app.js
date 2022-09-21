@@ -61,3 +61,28 @@ const questions = [...document.querySelector(".questions-container").children];
 questions.forEach((q) => {
   q.addEventListener("click", () => q.classList.toggle("hide-question"));
 });
+
+/**
+ * =========================
+ * =========================
+ *          email
+ * =========================
+ * =========================
+ */
+const form = document.getElementById("signup");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const inputContainer = form.querySelector(".input-container");
+  const emailInput = form.elements["email"];
+  const email = emailInput.value.trim();
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if (!emailRegex.test(email)) {
+    inputContainer.classList.add("input-error");
+  } else {
+    inputContainer.classList.remove("input-error");
+  }
+});
