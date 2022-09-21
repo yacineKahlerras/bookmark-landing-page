@@ -92,6 +92,7 @@ select {
   font-size: 62.5%;
   --Soft-Blue: hsl(231, 69%, 60%);
   --Soft-Red: hsl(0, 94%, 66%);
+  --Soft-Green: hsl(92deg 58% 50%);
   --Soft-Gray: #f7f7f7;
   --Grayish-Blue: hsl(229, 8%, 60%);
   --Very-Dark-Blue: hsl(229, 31%, 21%);
@@ -632,6 +633,36 @@ input error
   background: white url("./images/icon-error.svg") no-repeat;
   background-position: right 1rem top 50%;
 }
+/* 
+
+
+input error 
+
+
+*/
+.input-success {
+  margin-bottom: 3rem;
+  isolation: isolate;
+  border: 0.2rem solid var(--Soft-Green);
+  border-radius: 0.5em;
+}
+.input-success::after {
+  content: "Thanks for contacting us !";
+  width: calc(100% + 0.4rem);
+  height: 3rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  color: white;
+  background: var(--Soft-Green);
+  z-index: -1;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transform: translateX(-0.2rem);
+}
+
 /* 
 
 

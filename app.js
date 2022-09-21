@@ -82,7 +82,9 @@ form.addEventListener("submit", (event) => {
 
   if (!emailRegex.test(email)) {
     inputContainer.classList.add("input-error");
+    inputContainer.classList.remove("input-success");
   } else {
     inputContainer.classList.remove("input-error");
+    inputContainer.classList.add("input-success");
   }
 });
