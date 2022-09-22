@@ -838,7 +838,7 @@ lower footer
   left: 0;
   background: var(--Soft-Very-Dark-Blue);
   color: white;
-  transform: translateX(100%);
+  transform: translateX(200%);
   transition: var(--transition-2);
 }
 .sidemenu-center {
