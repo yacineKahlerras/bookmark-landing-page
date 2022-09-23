@@ -103,8 +103,8 @@ select {
   --transition-1: 0.2s;
   --transition-2: 0.5s;
   --elements-width-1: min(90%, 111rem);
-  --elements-width-2: min(100%, 64.8rem);
-  --elements-width-3: min(100%, 53.9rem);
+  --elements-width-2: min(90%, 64.8rem);
+  --elements-width-3: min(90%, 53.9rem);
   position: relative;
 }
 body {
