@@ -8,10 +8,12 @@
 const hamburger = document.getElementById("hamburger");
 const sidemenu = document.querySelector(".sidemenu");
 const nav = document.getElementById("nav");
+const body = document.body;
 
 const sidemenuVisibility = () => {
   nav.classList.toggle("sidemenu-nav");
   sidemenu.classList.toggle("show-sidemenu");
+  body.classList.toggle("noscroll");
 };
 
 hamburger.addEventListener("click", () => sidemenuVisibility());
