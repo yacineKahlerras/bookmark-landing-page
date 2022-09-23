@@ -103,8 +103,8 @@ select {
   --transition-1: 0.2s;
   --transition-2: 0.5s;
   --elements-width-1: min(90%, 111rem);
-  --elements-width-2: min(90%, 64.8rem);
-  --elements-width-3: min(90%, 53.9rem);
+  --elements-width-2: min(100%, 64.8rem);
+  --elements-width-3: min(100%, 53.9rem);
   position: relative;
 }
 body {
@@ -307,6 +307,12 @@ main {
   z-index: -1;
   border-radius: 15rem;
 }
+.hero-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
 
 /* text */
 .hero-content {
@@ -341,6 +347,9 @@ main {
     position: relative;
     left: 6rem;
   }
+  .hero-buttons-container {
+    flex-direction: row;
+  }
 }
 
 /* 
@@ -351,6 +360,7 @@ main {
 ====================
 */
 .features {
+  width: 100%;
   margin-bottom: 12.1rem;
   display: flex;
   flex-direction: column;
@@ -582,6 +592,7 @@ main {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3rem;
+  text-align: left;
 }
 .questions-container p {
   text-align: justify;
