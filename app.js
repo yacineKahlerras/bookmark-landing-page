@@ -72,6 +72,7 @@ questions.forEach((q) => {
  * =========================
  */
 const form = document.getElementById("signup");
+emailjs.init("_2e0ipBCFq4DOUHiE");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -89,4 +90,14 @@ form.addEventListener("submit", (event) => {
     inputContainer.classList.remove("input-error");
     inputContainer.classList.add("input-success");
   }
+
+  // sending email
+  /*emailjs.send("service_8fjnxfi", "template_xgm7lnu", {
+    email_id: email,
+    message: "heeeeeeey",
+  });*/
+
+  // window.open(
+  //   "mailto:kahlerasse@gmail.com?subject=awingMeMoney&body=hihihihihihihihihi"
+  // );
 });
