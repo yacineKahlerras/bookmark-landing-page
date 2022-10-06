@@ -8,7 +8,7 @@
 
 ## Overview
 
-Landing page with sliding animations and uses the EmailJS api to send emails to my gmail address, also a regex for email validation.
+Landing page with sliding animations and uses the ["EmailJS"](https://www.emailjs.com/) api to send emails to my gmail address, also a regex for email validation.
 
 ### Links
 
